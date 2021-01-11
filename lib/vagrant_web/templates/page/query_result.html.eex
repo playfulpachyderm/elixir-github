@@ -1,0 +1,12 @@
+<h1>This is the query results page</h1>
+<h2>There are <%= length(@repos) %> repos. </h2>
+<ul>
+  <%= for repo <- @repos do %>
+    <li>
+      <a href="<%= repo["url"] %>">
+        <%= repo["name"] %>
+      </a>
+      : <%= repo["description"] %>
+    </li>
+  <% end %>
+</ul>
